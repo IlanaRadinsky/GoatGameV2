@@ -1,0 +1,35 @@
+GoatGameV2 - Client Code
+- creates GameShowHost
+- creates Player
+- tells GameShowHost to start the game
+
+GameShowHost
+- constructor parameter: Player
+- beginGame() method
+- creates 3 doors
+- communicates with player:
+  - tells player what to do next
+  - opens goat door and tells player which is the goat door
+  - offers switch or keep doors
+- knows what is behind each door
+- can open door of player's choice and reveal what is in it
+- tells player what his final prize is
+
+Door
+- state of open/closed
+- assigns goat/car
+- keeps track of # goats and # cars -> doesn't assign more than 2 goats and 1 car
+- keeps track of # of doors -> if more than 3 doors are created, the later doors are invalid
+
+Player
+- abstract class
+- defines method to select initial door
+- requires a method to select the next door (keep/switch)
+
+KeepPlayer
+- extends Player
+- defines method to select the next door (keep)
+
+SwitchPlayer
+- extends Player
+- defines method to select the next door (switch)
